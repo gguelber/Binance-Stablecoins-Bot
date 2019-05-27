@@ -55,7 +55,7 @@ function setBuySell() {
 				? console.log(`
 O preço já está favorável, vamos lucrar`)
 				: console.log(`
-				O preço do TUSD ainda está acima do mínimo de ${config.MIN_BUY_PRICE} que você configurou!`);
+O preço do TUSD ainda está acima do mínimo de ${config.MIN_BUY_PRICE} que você configurou!`);
 
 			if (ticker.TUSDUSDT <= config.MIN_BUY_PRICE && availableUsdt > 20) {
 				try {
