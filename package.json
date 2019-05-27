@@ -1,0 +1,14 @@
+{
+	"name": "binance-stablecoin-bot",
+	"version": "1.0.0",
+	"description": "make infinity money with tusd and usdt",
+	"main": "bot.js",
+	"scripts": {
+		"start": "node bot.js"
+	},
+	"author": "gguelber",
+	"license": "ISC",
+	"dependencies": {
+		"node-binance-api": "^0.9.1"
+	}
+}

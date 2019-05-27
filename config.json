@@ -1,0 +1,7 @@
+{
+	"API_KEY": "",
+	"SECRET_KEY": "",
+	"MIN_BUY_PRICE": 0.995,
+	"SELL_MARGIN": 0.0045,
+	"INITIAL_INVESTMENT": 0.0
+}
