@@ -2,13 +2,22 @@
 
 ## Funcionamento
 
-É bem simples. O bot se aproveita das pequenas variações entre o TUSD e o USDT. Em cada negociação, você ganha um pouco mais do que as taxas da Binance. Cada trade é mais lucrativo que o anterior.
+É bem simples. Escolha qual moeda quer utilizar e rode o respectivo arquivo .js:
 
-O bot está programado para comprar sempre que o preço estiver abaixo de um valor definido e vender quando o preço atingir o valor comprado + margem: 
+        bot.js    (TUSD/USDT)
+        pax.js    (PAX/USDT)
+        usdc.js   (USDC/USDT)
+        usds.js   (USDS/USDT)
+        
+
+
+O bot se aproveita das pequenas variações entre qualquer stable coin e o USDT na Binance. Em cada negociação, você ganha um pouco mais do que as taxas da Binance.
+
+O bot está programado para comprar sempre que o preço estiver abaixo de um valor definido e vender quando o preço atingir o valor comprado + margem estipulada. 
 
 No arquivo config.json, configure os valores (abaixo estão os valores padrão):
 
-    "MIN_BUY_PRICE": 0.9950,
+    "MIN_BUY_PRICE": 0.9950,  
     "SELL_MARGIN": 0.045,
 
 
@@ -21,7 +30,7 @@ Clone esse repositório e edite o arquivo config.json inserindo sua API key e Se
 
 Instale o NodeJS: https://nodejs.org/en/
 
-Vá para a pasta bot com o terminal e execute
+Vá para a pasta onde baixou o bot com o terminal e execute:
 
 ```bash
 npm install
