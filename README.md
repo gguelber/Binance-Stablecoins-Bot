@@ -48,6 +48,14 @@ npm start
 
 Seja paciente e espere seu saldo em TUSD e USDT aumentar.
 
+## LUCROU?
+
+Considere apoiar esta e outras iniciativas realizando uma contribuição:
+
+        BTC: 1JscKknuB8WycWU2puQSSm1qg9KefXNFTA
+        
+     
+
 
 ## Créditos
 Ideia inicial @usdkhey
