@@ -1,7 +1,7 @@
 {
 	"name": "binance-stablecoin-bot",
 	"version": "1.0.0",
-	"description": "make infinity money with tusd and usdt",
+	"description": "make money from stablecoins",
 	"main": "bot.js",
 	"scripts": {
 		"start": "node bot.js"

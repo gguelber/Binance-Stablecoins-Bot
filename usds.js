@@ -45,7 +45,7 @@ async function getBalance() {
 			total = availableTusd + availableUsdt + onOrderTusd + onOrderUsdt;
 			getBestStable();
 			console.clear();
-			console.log(`BINANCE BOT
+			console.log(`BINANCE BOT - USDS
 ==========================================
 SALDO TOTAL: ${total} USD
 SALDO INICIAL: ${config.INITIAL_INVESTMENT} USD
@@ -63,27 +63,27 @@ Preço Mínimo de Compra: ${config.MIN_BUY_PRICE} ----- Margem de Venda: ${confi
 
 function setBuySell() {
 	try {
-		binance.prices('TUSDUSDT', (error, ticker) => {
+		binance.prices('USDSUSDT', (error, ticker) => {
 			if (error) return console.error(error);
 			console.log('==========================================');
-			ticker.TUSDUSDT <= config.MIN_BUY_PRICE
+			ticker.USDSUSDT <= config.MIN_BUY_PRICE
 				? console.log(`O preço já está favorável, vamos lucrar`)
-				: console.log(`O preço do TUSD ainda está acima do mínimo de ${config.MIN_BUY_PRICE} configurado.`);
+				: console.log(`O preço do USDS ainda está acima do mínimo de ${config.MIN_BUY_PRICE} configurado.`);
 
-			if (ticker.TUSDUSDT <= config.MIN_BUY_PRICE && availableUsdt > 20) {
+			if (ticker.USDSUSDT <= config.MIN_BUY_PRICE && availableUsdt > 20) {
 				try {
-					binance.buy('TUSDUSDT', ((availableUsdt - 0.1) / ticker.TUSDUSDT).toFixed(2), ticker.TUSDUSDT);
-					buyPrice = ticker.TUSDUSDT;
+					binance.buy('USDSUSDT', ((availableUsdt - 0.1) / ticker.USDSUSDT).toFixed(2), ticker.USDSUSDT);
+					buyPrice = ticker.USDSUSDT;
 					sellPrice = buyPrice + config.SELL_MARGIN;
-					console.log('Comprado a: ' + ticker.TUSDUSDT);
+					console.log('Comprado a: ' + ticker.USDSUSDT);
 				} catch (e) {
 					throw e;
 				}
 			}
 
-			if (ticker.TUSDUSDT > config.MIN_BUY_PRICE && availableTusd > 20) {
+			if (ticker.USDSUSDT > config.MIN_BUY_PRICE && availableTusd > 20) {
 				try {
-					binance.sell('TUSDUSDT', (availableTusd - 0.1).toFixed(2), sellPrice);
+					binance.sell('PAXUSDT', (availableTusd - 0.1).toFixed(2), sellPrice);
 					console.log('Vendido a: ' + sellPrice);
 				} catch (e) {
 					throw e;
@@ -97,4 +97,4 @@ function setBuySell() {
 
 setInterval(() => {
 	getBalance();
-}, 4000);
+}, 10000);
